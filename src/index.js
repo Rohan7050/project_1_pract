@@ -7,11 +7,9 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-mongoose.connect("mongodb+srv://rohan7599:MipvNOjb97usB2oZ@cluster0.lviwx.mongodb.net/project_1_pract?retryWrites=true&w=majority", {
-    useNewUrlParser: true
-})
-    .then(() => console.log("MongoDB connected"))
-    .catch((err) => console.log(err))
+mongoose.connect("mongodb+srv://rohan7599:MipvNOjb97usB2oZ@cluster0.lviwx.mongodb.net/project1DB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log('mongodb running on 27017'))
+    .catch(err => console.log(err))
 
 app.use("/", route)
 
