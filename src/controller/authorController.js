@@ -8,16 +8,16 @@ const createAuthor = async (req, res) => {
             return res.status(400).send({status: false, message: "please enter all required fields"})
         }
         const {fname, lname, title, email, password} = data
-        if (!validator.isValid(fname) && !validator.isValidString(fname)){
+        if (!validator.isValid(fname) || !validator.isValidString(fname)){
             return res.status(400).send({status: false, message: "please enter proper first name"})
         }
-        if (!validator.isValid(lname) && !validator.isValidString(lname)){
+        if (!validator.isValid(lname) || !validator.isValidString(lname)){
             return res.status(400).send({status: false, message: "please enter proper last name"})
         }
-        if (!validator.isValid(title) && !validator.isValidString(title)){
+        if (!validator.isValid(title) || !validator.isValidString(title)){
             return res.status(400).send({status: false, message: "please enter proper title"})
         }
-        if (!validator.isValid(email) && !validator.isValidEmail(email)){
+        if (!validator.isValid(email) || !validator.isValidEmail(email)){
             return res.status(400).send({status: false, message: "please enter proper email"})
         }
         const isEmailInUse = await authorModel.findOne({email: email}) 
