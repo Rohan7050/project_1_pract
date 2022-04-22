@@ -1,0 +1,27 @@
+{
+  "name": "project_1_pract",
+  "version": "1.0.0",
+  "description": "for practice (22 April 2022)\r # Thorium\r Repository for backend cohort - Thorium",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohan7050/project_1_pract.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rohan7050/project_1_pract/issues"
+  },
+  "homepage": "https://github.com/Rohan7050/project_1_pract#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.1",
+    "validator": "^13.7.0"
+  }
+}
